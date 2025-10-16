@@ -1,0 +1,12 @@
+{
+  "name": "France",
+  "capital": "Paris",
+  "population": 67364357,
+  "area": 551695,
+  "currency": "Euro",
+  "languages": [
+    "French"
+  ],
+  "region": "Europe",
+  "subregion": "Western Europe"
+}
