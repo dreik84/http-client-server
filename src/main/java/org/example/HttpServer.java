@@ -17,10 +17,9 @@ public class HttpServer {
     }
 
     public void run() {
-
         try {
             ServerSocket serverSocket = new ServerSocket(port);
-            var socket = serverSocket.accept();
+            Socket socket = serverSocket.accept();
             processSocket(socket);
         } catch (IOException e) {
             e.printStackTrace();
@@ -33,7 +32,7 @@ public class HttpServer {
              var inputStream = new DataInputStream(socket.getInputStream());
              var outputStream = new DataOutputStream(socket.getOutputStream())) {
 
-            System.out.println(new String(inputStream.readNBytes(4000)));
+            System.out.println(new String(inputStream.readNBytes(400)));
 
             byte[] body = Files.readAllBytes(Path.of("src/main/resources/example.html"));
 
